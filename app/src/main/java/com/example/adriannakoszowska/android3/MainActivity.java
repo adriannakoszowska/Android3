@@ -7,6 +7,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
+import static java.lang.StrictMath.sin;
 import static java.lang.StrictMath.sqrt;
 
 
@@ -98,6 +99,10 @@ public class MainActivity extends ActionBarActivity {
                 dzialanie_globalne = "sqrt";
                 wynik();
                 break;
+            case R.id.sin:
+                dzialanie_globalne = "sin";
+                wynik();
+                break;
         }
         if(dzialanie != null) {
             poprzednie.setText(dzialanie.getText() + value);
@@ -140,6 +145,9 @@ public class MainActivity extends ActionBarActivity {
                 break;
             case "sqrt":
                 value = String.valueOf(sqrt(numberone));
+                break;
+            case "sin":
+                value = String.valueOf(sin(numberone));
                 break;
         }
         poprzednie.setText("");
