@@ -8,6 +8,9 @@ import android.view.View;
 import android.widget.TextView;
 
 import static java.lang.StrictMath.PI;
+import static java.lang.StrictMath.acos;
+import static java.lang.StrictMath.asin;
+import static java.lang.StrictMath.atan;
 import static java.lang.StrictMath.cos;
 import static java.lang.StrictMath.log1p;
 import static java.lang.StrictMath.sin;
@@ -127,6 +130,18 @@ public class MainActivity extends ActionBarActivity {
                 dzialanie_globalne = "lognat";
                 wynik();
                 break;
+            case R.id.asin:
+                dzialanie_globalne = "asin";
+                wynik();
+                break;
+            case R.id.acos:
+                dzialanie_globalne = "acos";
+                wynik();
+                break;
+            case R.id.atan:
+                dzialanie_globalne = "atan";
+                wynik();
+                break;
         }
         if(dzialanie != null) {
             poprzednie.setText(dzialanie.getText() + value);
@@ -187,6 +202,15 @@ public class MainActivity extends ActionBarActivity {
                 break;
             case "lognat":
                 value = String.valueOf(log1p(numberone));
+                break;
+            case "asin":
+                value = String.valueOf(asin(numberone));
+                break;
+            case "acos":
+                value = String.valueOf(acos(numberone));
+                break;
+            case "atan":
+                value = String.valueOf(atan(numberone));
                 break;
         }
         poprzednie.setText("");
