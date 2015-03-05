@@ -113,6 +113,10 @@ public class MainActivity extends ActionBarActivity {
                 dzialanie_globalne = "tan";
                 wynik();
                 break;
+            case R.id.ctan:
+                dzialanie_globalne = "ctan";
+                wynik();
+                break;
         }
         if(dzialanie != null) {
             poprzednie.setText(dzialanie.getText() + value);
@@ -164,6 +168,9 @@ public class MainActivity extends ActionBarActivity {
                 break;
             case "tan":
                 value = String.valueOf(tan(numberone));
+                break;
+            case "ctan":
+                value = String.valueOf(1 / tan(numberone));
                 break;
         }
         poprzednie.setText("");
