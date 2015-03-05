@@ -272,7 +272,8 @@
         android:layout_alignTop="@+id/sin"
         android:layout_toRightOf="@+id/sin"
         android:layout_toEndOf="@+id/sin"
-        android:textColor="@android:color/holo_green_light" />
+        android:textColor="@android:color/holo_green_light"
+        android:onClick="Click" />
 
     <Button
         android:layout_width="wrap_content"

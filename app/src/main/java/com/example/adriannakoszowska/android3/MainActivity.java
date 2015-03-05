@@ -7,6 +7,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
+import static java.lang.StrictMath.cos;
 import static java.lang.StrictMath.sin;
 import static java.lang.StrictMath.sqrt;
 
@@ -103,6 +104,10 @@ public class MainActivity extends ActionBarActivity {
                 dzialanie_globalne = "sin";
                 wynik();
                 break;
+            case R.id.cos:
+                dzialanie_globalne = "cos";
+                wynik();
+                break;
         }
         if(dzialanie != null) {
             poprzednie.setText(dzialanie.getText() + value);
@@ -148,6 +153,9 @@ public class MainActivity extends ActionBarActivity {
                 break;
             case "sin":
                 value = String.valueOf(sin(numberone));
+                break;
+            case "cos":
+                value = String.valueOf(cos(numberone));
                 break;
         }
         poprzednie.setText("");
