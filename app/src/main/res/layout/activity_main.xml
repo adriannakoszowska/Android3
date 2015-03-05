@@ -4,7 +4,8 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
-    android:background="@android:color/darker_gray">
+    android:background="@android:color/darker_gray"
+    android:onClick="Click">
 
     <TextView android:text="Math Calc" android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -237,10 +238,10 @@
         android:text="Czyść"
         android:id="@+id/czysc"
         android:onClick="Czyszczenie"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:textColor="@android:color/holo_green_dark" />
+        android:textColor="@android:color/holo_green_dark"
+        android:layout_above="@+id/dodaj"
+        android:layout_alignLeft="@+id/dodaj"
+        android:layout_alignStart="@+id/dodaj" />
 
     <Button
         android:layout_width="wrap_content"
@@ -337,7 +338,8 @@
         android:layout_below="@+id/ctan"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:onClick="Click" />
+        android:onClick="Click"
+        android:textColor="@android:color/holo_green_light" />
 
     <Button
         android:layout_width="wrap_content"
@@ -347,7 +349,8 @@
         android:layout_below="@+id/pi"
         android:layout_alignLeft="@+id/pi"
         android:layout_alignStart="@+id/pi"
-        android:onClick="Click" />
+        android:onClick="Click"
+        android:textColor="@android:color/holo_green_light" />
 
     <Button
         android:layout_width="wrap_content"
@@ -357,7 +360,8 @@
         android:layout_below="@+id/pi"
         android:layout_toRightOf="@+id/acos"
         android:layout_toEndOf="@+id/acos"
-        android:onClick="Click" />
+        android:onClick="Click"
+        android:textColor="@android:color/holo_green_light" />
 
     <Button
         android:layout_width="wrap_content"
@@ -367,6 +371,7 @@
         android:layout_alignBottom="@+id/atan"
         android:layout_alignLeft="@+id/procent"
         android:layout_alignStart="@+id/procent"
-        android:onClick="Click" />
+        android:onClick="Click"
+        android:textColor="@android:color/holo_green_light" />
 
 </RelativeLayout>
