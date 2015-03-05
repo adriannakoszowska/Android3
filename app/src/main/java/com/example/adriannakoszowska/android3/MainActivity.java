@@ -7,6 +7,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
+import static java.lang.StrictMath.sqrt;
+
 
 public class MainActivity extends ActionBarActivity {
     String dzialanie_globalne="";
@@ -91,6 +93,11 @@ public class MainActivity extends ActionBarActivity {
                 value = "/";
                 dzialanie_globalne = "dzi";
                 break;
+            case R.id.sqrt:
+                //value = "sqrt";
+                dzialanie_globalne = "sqrt";
+                wynik();
+                break;
         }
         if(dzialanie != null) {
             poprzednie.setText(dzialanie.getText() + value);
@@ -130,6 +137,9 @@ public class MainActivity extends ActionBarActivity {
                 break;
             case "dzi":
                 value = String.valueOf(numberone / numbertwo);
+                break;
+            case "sqrt":
+                value = String.valueOf(sqrt(numberone));
                 break;
         }
         poprzednie.setText("");
