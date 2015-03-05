@@ -305,7 +305,8 @@
         android:layout_alignTop="@+id/ctan"
         android:layout_toRightOf="@+id/ctan"
         android:layout_toEndOf="@+id/ctan"
-        android:textColor="@android:color/holo_green_light" />
+        android:textColor="@android:color/holo_green_light"
+        android:onClick="Click" />
 
     <Button
         android:layout_width="wrap_content"

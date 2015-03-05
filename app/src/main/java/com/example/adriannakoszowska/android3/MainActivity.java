@@ -7,6 +7,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
+import static java.lang.StrictMath.PI;
 import static java.lang.StrictMath.cos;
 import static java.lang.StrictMath.sin;
 import static java.lang.StrictMath.sqrt;
@@ -117,6 +118,10 @@ public class MainActivity extends ActionBarActivity {
                 dzialanie_globalne = "ctan";
                 wynik();
                 break;
+            case R.id.pi:
+                dzialanie_globalne = "pi";
+                wynik();
+                break;
         }
         if(dzialanie != null) {
             poprzednie.setText(dzialanie.getText() + value);
@@ -171,6 +176,9 @@ public class MainActivity extends ActionBarActivity {
                 break;
             case "ctan":
                 value = String.valueOf(1 / tan(numberone));
+                break;
+            case "pi":
+                value = String.valueOf(numberone * PI);
                 break;
         }
         poprzednie.setText("");
