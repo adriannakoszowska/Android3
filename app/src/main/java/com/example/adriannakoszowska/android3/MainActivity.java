@@ -10,6 +10,7 @@ import android.widget.TextView;
 import static java.lang.StrictMath.cos;
 import static java.lang.StrictMath.sin;
 import static java.lang.StrictMath.sqrt;
+import static java.lang.StrictMath.tan;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -108,6 +109,10 @@ public class MainActivity extends ActionBarActivity {
                 dzialanie_globalne = "cos";
                 wynik();
                 break;
+            case R.id.tan:
+                dzialanie_globalne = "tan";
+                wynik();
+                break;
         }
         if(dzialanie != null) {
             poprzednie.setText(dzialanie.getText() + value);
@@ -156,6 +161,9 @@ public class MainActivity extends ActionBarActivity {
                 break;
             case "cos":
                 value = String.valueOf(cos(numberone));
+                break;
+            case "tan":
+                value = String.valueOf(tan(numberone));
                 break;
         }
         poprzednie.setText("");
