@@ -79,6 +79,7 @@ public class MainActivity extends ActionBarActivity {
         dzialanie.setText(dzialanie.getText() + "" + value);
     }
     public void Click(View view) {
+        boolean przenies = false;
         TextView poprzednie=(TextView)findViewById(R.id.poprzednie);
         TextView dzialanie=(TextView)findViewById(R.id.dzialanie);
         //dodawanie liczby do dzialania
@@ -105,54 +106,72 @@ public class MainActivity extends ActionBarActivity {
             case R.id.sqrt:
                 //value = "sqrt";
                 dzialanie_globalne = "sqrt";
+                przenies = true;
                 wynik();
                 break;
             case R.id.sin:
                 dzialanie_globalne = "sin";
+                przenies = true;
                 wynik();
                 break;
             case R.id.cos:
                 dzialanie_globalne = "cos";
+                przenies = true;
                 wynik();
                 break;
             case R.id.tan:
                 dzialanie_globalne = "tan";
+                przenies = true;
                 wynik();
                 break;
             case R.id.ctan:
                 dzialanie_globalne = "ctan";
+                przenies = true;
                 wynik();
                 break;
             case R.id.pi:
                 dzialanie_globalne = "pi";
+                przenies = true;
                 wynik();
                 break;
             case R.id.lognat:
                 dzialanie_globalne = "lognat";
+                przenies = true;
                 wynik();
                 break;
             case R.id.asin:
                 dzialanie_globalne = "asin";
+                przenies = true;
                 wynik();
                 break;
             case R.id.acos:
                 dzialanie_globalne = "acos";
+                przenies = true;
                 wynik();
                 break;
             case R.id.atan:
                 dzialanie_globalne = "atan";
+                przenies = true;
                 wynik();
                 break;
             case R.id.power:
                 value = "^exp";
                 dzialanie_globalne = "power";
+                przenies = false;
+                break;
+            case R.id.procent:
+                dzialanie_globalne = "procent";
+                przenies = true;
+                wynik();
                 break;
         }
-        if(dzialanie != null) {
-            poprzednie.setText(dzialanie.getText() + value);
-            dzialanie.setText("");
-        } else {
-            dzialanie.setText("Wprowadź liczbę");
+        if(przenies == false) {
+            if (dzialanie != null) {
+                poprzednie.setText(dzialanie.getText() + value);
+                dzialanie.setText("");
+            } else {
+                dzialanie.setText("Wprowadź liczbę");
+            }
         }
     }
     public void getnumbertwo(View view) {
@@ -219,6 +238,9 @@ public class MainActivity extends ActionBarActivity {
                 break;
             case "power":
                 value = String.valueOf(pow(numberone,numbertwo));
+                break;
+            case "procent":
+                value = String.valueOf(numberone / 100);
                 break;
         }
         poprzednie.setText("");

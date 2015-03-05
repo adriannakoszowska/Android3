@@ -328,7 +328,8 @@
         android:layout_alignTop="@+id/lognat"
         android:layout_toRightOf="@+id/lognat"
         android:layout_toEndOf="@+id/lognat"
-        android:textColor="@android:color/holo_green_light" />
+        android:textColor="@android:color/holo_green_light"
+        android:onClick="Click" />
 
     <Button
         android:layout_width="wrap_content"
