@@ -230,10 +230,81 @@
         android:layout_height="wrap_content"
         android:text="Czyść"
         android:id="@+id/czysc"
+        android:onClick="Czyszczenie"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="sqrt"
+        android:id="@+id/sqrt"
         android:layout_below="@+id/button0"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="61dp"
-        android:onClick="Czyszczenie" />
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="sin"
+        android:id="@+id/sin"
+        android:layout_alignTop="@+id/sqrt"
+        android:layout_toRightOf="@+id/czysc"
+        android:layout_toEndOf="@+id/czysc" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="cos"
+        android:id="@+id/cos"
+        android:layout_alignTop="@+id/sin"
+        android:layout_toRightOf="@+id/sin"
+        android:layout_toEndOf="@+id/sin" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="tan"
+        android:id="@+id/tan"
+        android:layout_alignTop="@+id/cos"
+        android:layout_toRightOf="@+id/cos"
+        android:layout_toEndOf="@+id/cos" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ctan"
+        android:id="@+id/ctan"
+        android:layout_below="@+id/sqrt"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="pi"
+        android:id="@+id/pi"
+        android:layout_alignTop="@+id/ctan"
+        android:layout_toRightOf="@+id/ctan"
+        android:layout_toEndOf="@+id/ctan" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="x!"
+        android:id="@+id/rekurencja"
+        android:layout_alignTop="@+id/pi"
+        android:layout_toRightOf="@+id/pi"
+        android:layout_toEndOf="@+id/pi" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="%"
+        android:id="@+id/procent"
+        android:layout_alignTop="@+id/rekurencja"
+        android:layout_toRightOf="@+id/rekurencja"
+        android:layout_toEndOf="@+id/rekurencja" />
 
 </RelativeLayout>
