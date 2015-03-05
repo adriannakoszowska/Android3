@@ -311,8 +311,8 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="x!"
-        android:id="@+id/rekurencja"
+        android:text="ln"
+        android:id="@+id/lognat"
         android:layout_alignTop="@+id/pi"
         android:layout_toRightOf="@+id/pi"
         android:layout_toEndOf="@+id/pi"
@@ -323,9 +323,9 @@
         android:layout_height="wrap_content"
         android:text="%"
         android:id="@+id/procent"
-        android:layout_alignTop="@+id/rekurencja"
-        android:layout_toRightOf="@+id/rekurencja"
-        android:layout_toEndOf="@+id/rekurencja"
+        android:layout_alignTop="@+id/lognat"
+        android:layout_toRightOf="@+id/lognat"
+        android:layout_toEndOf="@+id/lognat"
         android:textColor="@android:color/holo_green_light" />
 
 </RelativeLayout>
