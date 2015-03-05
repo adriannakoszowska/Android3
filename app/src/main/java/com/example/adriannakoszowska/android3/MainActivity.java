@@ -13,6 +13,7 @@ import static java.lang.StrictMath.asin;
 import static java.lang.StrictMath.atan;
 import static java.lang.StrictMath.cos;
 import static java.lang.StrictMath.log1p;
+import static java.lang.StrictMath.pow;
 import static java.lang.StrictMath.sin;
 import static java.lang.StrictMath.sqrt;
 import static java.lang.StrictMath.tan;
@@ -142,6 +143,10 @@ public class MainActivity extends ActionBarActivity {
                 dzialanie_globalne = "atan";
                 wynik();
                 break;
+            case R.id.power:
+                value = "^exp";
+                dzialanie_globalne = "power";
+                break;
         }
         if(dzialanie != null) {
             poprzednie.setText(dzialanie.getText() + value);
@@ -211,6 +216,9 @@ public class MainActivity extends ActionBarActivity {
                 break;
             case "atan":
                 value = String.valueOf(atan(numberone));
+                break;
+            case "power":
+                value = String.valueOf(pow(numberone,numbertwo));
                 break;
         }
         poprzednie.setText("");

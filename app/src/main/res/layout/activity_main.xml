@@ -359,4 +359,14 @@
         android:layout_toEndOf="@+id/acos"
         android:onClick="Click" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="^exp"
+        android:id="@+id/power"
+        android:layout_alignBottom="@+id/atan"
+        android:layout_alignLeft="@+id/procent"
+        android:layout_alignStart="@+id/procent"
+        android:onClick="Click" />
+
 </RelativeLayout>
